@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8e72ee17-1ae1-4eb5-9164-a6611f2015a0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from tbtorres;]]>
+	</queryString>
+	<field name="idTorres" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TorresStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TorresNomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TorresSigla" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idcidade" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TorresFaixaAdm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TorresCIDR" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="13" width="215" height="25" uuid="23fdf522-c549-4b0c-ab14-0d6a84bfd469"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Sites]]></text>
+			</staticText>
+			<image>
+				<reportElement x="26" y="13" width="52" height="49" uuid="6339a58e-9d7d-4942-bd0d-a7454168252b"/>
+				<imageExpression><![CDATA["D:\\SystemInfo\\PrjSystemInfo1\\logo (73x80).jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="0" width="62" height="20" uuid="1166840b-6c8b-420a-840f-4bbcf2c2cd7b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="121" height="20" uuid="d18be1fd-09bf-442a-8983-79faac3ade6f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nomes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="0" width="120" height="20" uuid="0e3b982f-8232-4791-9150-6bc4b57af03b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Sigla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="126" height="20" uuid="b6e325b8-651d-48db-bd11-6b6e31ece433"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Faixa Adm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="0" width="80" height="20" uuid="723adc86-b005-4c92-bebb-b7ad33dcf944"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CIDR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="0" width="62" height="20" uuid="40da20ba-eea9-44d0-96fe-669133d4ec9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idTorres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="0" width="122" height="20" uuid="dd121d7b-318f-4022-86ca-06e5460f31bc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TorresNomes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="120" height="20" uuid="73bfc50c-5401-4452-971a-68d77357f63d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TorresSigla}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="1" width="126" height="20" uuid="262b29e5-0515-4955-9531-d137df6144b6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TorresFaixaAdm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="1" width="80" height="20" uuid="ed45b10d-3c22-4f1d-a91a-8347e4fc1a07"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TorresCIDR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="429" y="0" width="100" height="20" uuid="f6fce985-6abc-4353-882f-a51cb7ff61f6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
